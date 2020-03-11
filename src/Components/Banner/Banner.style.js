@@ -1,7 +1,17 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const BannerFrame = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-columns: 50px;
+  grid-auto-rows: 50px;
+  grid-gap: 10px;
+  @media screen and (max-width: 768px) {
+    grid-auto-flow: row;
+  }
 `;
-export const SocialLink = styled(Link)``;
+export const SocialLink = styled(Link)`
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;

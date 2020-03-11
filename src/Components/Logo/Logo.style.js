@@ -10,16 +10,16 @@ export const LogoFrame = styled.div`
 `;
 
 export const ToggleUp = styled.div`
-  width: 40px;
+  width: 35px;
   height: 2px;
   ${props =>
     props.active
       ? "margin-bottom : -1.5px; transform:rotate(45deg);"
-      : " margin-bottom: 20px"};
+      : " margin-bottom: 15px"};
   background-color: white;
 `;
 export const ToggleDown = styled.div`
-  width: 40px;
+  width: 35px;
   height: 2px;
   background-color: white;
   ${props => props.active && "transform:rotate(-45deg);"};
