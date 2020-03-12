@@ -6,7 +6,7 @@ export const NavFrame = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  width: 400px;
+  width: 350px;
   height: 100vh;
   z-index: 1;
   background-color: ${color.blue};

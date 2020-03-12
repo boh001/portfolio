@@ -9,7 +9,7 @@ export default () => {
         <br />
         <br /> I'm <Name>Kim Sang Hyeon</Name>
       </Theme>
-      <Main>Welcom to my Porfolio</Main>
+      <Main>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk</Main>
     </ContentFrame>
   );
 };
