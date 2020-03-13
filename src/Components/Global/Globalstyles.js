@@ -10,6 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     body{
         color:white;
         font-family: 'Poppins', sans-serif;
+
     }
     html{
 

@@ -61,29 +61,18 @@ const ReadMore = styled.div`
   width: 70px;
   height: 20px;
   color: white;
-  background-color: black;
+  background-color: ${color.blue};
 `;
 const ProjectItem = styled.div`
-  background-color: white;
   width: 100%;
   height: 100%;
   ${center};
   flex-direction: column;
   cursor: pointer;
-  color: black;
-
+  color: white;
+  background-color: black;
   &:hover {
-    color: white;
-    background-color: black;
-  }
-  &:hover ${ReadMore} {
-    background-color: ${color.blue};
-  }
-  &:hover ${ReadMore} {
-  }
-  &:hover ${ReadMore} {
-  }
-  &:hover ${ReadMore} {
+    border: 1px solid white;
   }
 `;
 const Prev = styled.div`
@@ -108,7 +97,12 @@ const Next = styled.div`
   }
   ${props => props.margin === -200 && "display: none"}
 `;
-
+const FocusFrame = styled.div`
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+`;
 export default () => {
   const [margin, setMargin] = useState(200);
 
@@ -120,6 +114,7 @@ export default () => {
     setMargin(margin - 200);
   });
   return (
+    // <FocusFrame>
     <ProjectFrame>
       <ProjectSlider>
         <Prev margin={margin} onClick={e => prev(e)}></Prev>
@@ -172,5 +167,6 @@ export default () => {
         <Next margin={margin} onClick={e => next(e)}></Next>
       </ProjectSlider>
     </ProjectFrame>
+    /* </FocusFrame> */
   );
 };
