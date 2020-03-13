@@ -14,7 +14,9 @@ export const BannerFrame = styled.div`
     bottom: 100px;
   }
 `;
-export const SocialLink = styled(Link)`
+export const SocialLink = styled.a.attrs(props => ({
+  href: props.url
+}))`
   border: 1px solid white;
   display: flex;
   align-items: center;

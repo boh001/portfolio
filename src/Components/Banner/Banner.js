@@ -16,7 +16,7 @@ export default () => {
       <SocialLink to="#">
         <FontAwesomeIcon icon={faInstagram} size={"lg"} />
       </SocialLink>
-      <SocialLink to="#">
+      <SocialLink url={"https://www.github.com/boh001"}>
         <FontAwesomeIcon icon={faGithub} size={"lg"} />
       </SocialLink>
     </BannerFrame>
