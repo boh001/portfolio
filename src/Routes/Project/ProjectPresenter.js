@@ -26,9 +26,9 @@ const ProjectItems = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 1fr;
-  grid-gap: 50px;
+  grid-gap: 10px;
   width: 80%;
-  height: 60%;
+  height: 80%;
 `;
 
 const Project = styled.div`
@@ -71,13 +71,19 @@ const ProjectItem = styled.div`
   cursor: pointer;
   color: white;
   background-color: black;
+  transition: all ease 0.5s;
   &:hover {
-    border: 1px solid white;
+    background-color: white;
+    color: black;
+  }
+  &:hover ${ReadMore} {
+    background-color: black;
+    color: white;
   }
 `;
 const Prev = styled.div`
   cursor: pointer;
-  top: 135px;
+  top: 175px;
   left: 0px;
   position: absolute;
   z-index: 2;
@@ -88,7 +94,7 @@ const Prev = styled.div`
 `;
 const Next = styled.div`
   cursor: pointer;
-  top: 135px;
+  top: 175px;
   right: 0px;
   position: absolute;
   z-index: 2;
@@ -97,12 +103,7 @@ const Next = styled.div`
   }
   ${props => props.margin === -200 && "display: none"}
 `;
-const FocusFrame = styled.div`
-  visibility: hidden;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-`;
+
 export default () => {
   const [margin, setMargin] = useState(200);
 
@@ -114,7 +115,6 @@ export default () => {
     setMargin(margin - 200);
   });
   return (
-    // <FocusFrame>
     <ProjectFrame>
       <ProjectSlider>
         <Prev margin={margin} onClick={e => prev(e)}></Prev>
@@ -167,6 +167,5 @@ export default () => {
         <Next margin={margin} onClick={e => next(e)}></Next>
       </ProjectSlider>
     </ProjectFrame>
-    /* </FocusFrame> */
   );
 };

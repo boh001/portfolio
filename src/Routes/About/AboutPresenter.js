@@ -35,6 +35,7 @@ const Skill = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   transition: all ease 1s;
+  margin-left: ${props => props.first};
 `;
 const SkillName = styled.div``;
 const Skillitems = styled.div`
@@ -95,7 +96,7 @@ const Prev = styled.div`
   &:after {
     content: "<<";
   }
-  ${props => props.page === -1 && "display: none"}
+  ${props => props.margin === 200 && "display: none"}
 `;
 const Next = styled.div`
   cursor: pointer;
@@ -106,84 +107,27 @@ const Next = styled.div`
   &:after {
     content: ">>";
   }
-  ${props => props.page === 1 && "display: none"}
+  ${props => props.margin === -200 && "display: none"}
 `;
-export default () => {
-  let [page, setPage] = useState(0);
-  const slider1 = useRef();
-  const slider2 = useRef();
+export default React.memo(() => {
+  const [margin, setMargin] = useState(200);
 
   const prev = useCallback(e => {
-    setPage(--page);
-    if (page === 0) {
-      slider1.current.style.marginLeft = "0";
-      slider2.current.style.marginRight = "0";
-    } else if (page === 1) {
-      slider1.current.style.marginLeft = " 0%";
-      slider2.current.style.marginRight = " 200%";
-    } else {
-      slider1.current.style.marginLeft = "200%";
-      slider2.current.style.marginRight = "0%";
-    }
+    setMargin(margin + 200);
   });
+
   const next = useCallback(e => {
-    setPage(++page);
-    if (page === 0) {
-      slider2.current.style.marginRight = "0";
-      slider1.current.style.marginLeft = "0";
-    } else if (page === 1) {
-      slider2.current.style.marginRight = " 200%";
-      slider1.current.style.marginLeft = " 0%";
-    } else {
-      slider2.current.style.marginRight = "0%";
-      slider1.current.style.marginLeft = "200%";
-    }
+    setMargin(margin - 200);
   });
+  console.log("about");
+
   return (
     <SkillFrame>
       <SkillTheme>My skills</SkillTheme>
       <SkillSlider>
-        <Prev onClick={e => prev(e)} page={page}></Prev>
-        <Skill ref={slider1}>
-          <SkillName>Back-end</SkillName>
-          <Skillitems>
-            <Skillitem>
-              <ItemName>nodejs</ItemName>
-              <Item>
-                <Img url={url.nodejs} />
-              </Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-            <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
-            </Skillitem>
-          </Skillitems>
-        </Skill>
-        <Skill>
+        <Prev margin={margin} onClick={e => prev(e)}></Prev>
+
+        <Skill first={`${margin}%`}>
           <SkillName>Front-end</SkillName>
           <Skillitems>
             <Skillitem>
@@ -228,7 +172,46 @@ export default () => {
             </Skillitem>
           </Skillitems>
         </Skill>
-        <Skill ref={slider2}>
+        <Skill>
+          <SkillName>Back-end</SkillName>
+          <Skillitems>
+            <Skillitem>
+              <ItemName>nodejs</ItemName>
+              <Item>
+                <Img url={url.nodejs} />
+              </Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+            <Skillitem>
+              <ItemName>none</ItemName>
+              <Item></Item>
+            </Skillitem>
+          </Skillitems>
+        </Skill>
+        <Skill>
           <SkillName>Others</SkillName>
           <Skillitems>
             <Skillitem>
@@ -271,8 +254,8 @@ export default () => {
             </Skillitem>
           </Skillitems>
         </Skill>
-        <Next onClick={e => next(e)} page={page}></Next>
+        <Next onClick={e => next(e)} margin={margin}></Next>
       </SkillSlider>
     </SkillFrame>
   );
-};
+});

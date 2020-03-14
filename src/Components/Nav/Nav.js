@@ -1,7 +1,8 @@
 import React from "react";
 import { NavFrame, NavLink, LinkFrame } from "./Nav.style";
 
-export default () => {
+export default React.memo(() => {
+  console.log("nav");
   return (
     <NavFrame>
       <LinkFrame>
@@ -12,4 +13,4 @@ export default () => {
       </LinkFrame>
     </NavFrame>
   );
-};
+});

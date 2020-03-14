@@ -15,6 +15,7 @@ import Bg from "./Bg/Bg";
 import Logo from "./Logo/Logo";
 
 export default () => {
+  console.log("router");
   const [page, setPage] = useState("");
   const [active, setActive] = useState(false);
   return (

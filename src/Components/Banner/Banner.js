@@ -8,6 +8,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default () => {
+  console.log("banner");
+
   return (
     <BannerFrame>
       <SocialLink to="#">
