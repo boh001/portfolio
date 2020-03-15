@@ -1,27 +1,32 @@
 import styled from "styled-components";
-import React, { useRef, useCallback, useState } from "react";
-import { padding, center, url, color } from "Components/Global/variable";
+import React, { useCallback, useState } from "react";
+import { padding, center, color } from "Components/Global/variable";
 
 const ProjectSlider = styled.div`
   flex: none;
-  position: relative;
-  width: 500px;
+  width: 400px;
   height: 350px;
   ${center};
   overflow: hidden;
   transition: all ease 1s;
 `;
 
-const ProjectFrame = styled.div`
+const ProjectWrap = styled.div`
   flex: none;
-  position: relative;
+
   width: 100%;
   height: 100%;
   ${center};
   flex-direction: column;
   margin-top: ${padding.content};
 `;
-
+const ProjectFrame = styled.div`
+  position: relative;
+  width: 500px;
+  height: 400px;
+  ${center};
+  flex-direction: column;
+`;
 const ProjectItems = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -33,8 +38,8 @@ const ProjectItems = styled.div`
 
 const Project = styled.div`
   flex: none;
-  width: 500px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,8 +69,8 @@ const ReadMore = styled.div`
   background-color: ${color.blue};
 `;
 const ProjectItem = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 155px;
+  height: 280px;
   ${center};
   flex-direction: column;
   cursor: pointer;
@@ -83,7 +88,7 @@ const ProjectItem = styled.div`
 `;
 const Prev = styled.div`
   cursor: pointer;
-  top: 175px;
+  top: 200px;
   left: 0px;
   position: absolute;
   z-index: 2;
@@ -94,7 +99,7 @@ const Prev = styled.div`
 `;
 const Next = styled.div`
   cursor: pointer;
-  top: 175px;
+  top: 200px;
   right: 0px;
   position: absolute;
   z-index: 2;
@@ -115,57 +120,58 @@ export default () => {
     setMargin(margin - 200);
   });
   return (
-    <ProjectFrame>
-      <ProjectSlider>
-        <Prev margin={margin} onClick={e => prev(e)}></Prev>
-        <Project first={`${margin}%`}>
-          <ProjectItems>
-            <ProjectItem>
-              <ProjectName>1</ProjectName>
-              <ProjectDes>Document Classification</ProjectDes>
-              <ReadMore>Read More</ReadMore>
-            </ProjectItem>
+    <ProjectWrap>
+      <ProjectFrame>
+        <ProjectSlider>
+          <Prev margin={margin} onClick={e => prev(e)}></Prev>
+          <Project first={`${margin}%`}>
+            <ProjectItems>
+              <ProjectItem>
+                <ProjectName>1</ProjectName>
+                <ProjectDes>Document Classification</ProjectDes>
+                <ReadMore>Read More</ReadMore>
+              </ProjectItem>
 
-            <ProjectItem>
-              <ProjectName>2</ProjectName>
-              <ProjectDes>Normal map creation</ProjectDes>
-              <ReadMore>Read More</ReadMore>
-            </ProjectItem>
-          </ProjectItems>
-        </Project>
-        <Project>
-          <ProjectItems>
-            <ProjectItem>
-              <ProjectName>3</ProjectName>
-              <ProjectDes>Low-dose-CT denoise</ProjectDes>
-              <ReadMore>Read More</ReadMore>
-            </ProjectItem>
+              <ProjectItem>
+                <ProjectName>2</ProjectName>
+                <ProjectDes>Normal map creation</ProjectDes>
+                <ReadMore>Read More</ReadMore>
+              </ProjectItem>
+            </ProjectItems>
+          </Project>
+          <Project>
+            <ProjectItems>
+              <ProjectItem>
+                <ProjectName>3</ProjectName>
+                <ProjectDes>Low-dose-CT denoise</ProjectDes>
+                <ReadMore>Read More</ReadMore>
+              </ProjectItem>
 
-            <ProjectItem>
-              <ProjectName>4</ProjectName>
-              <ProjectDes>MultiLabel Classfication</ProjectDes>
-              <ReadMore>Read More</ReadMore>
-            </ProjectItem>
-          </ProjectItems>
-        </Project>
-        <Project>
-          <ProjectItems>
-            <ProjectItem>
-              <ProjectName>5</ProjectName>
-              <ProjectDes>Facebook Clone</ProjectDes>
-              <ReadMore>Read More</ReadMore>
-            </ProjectItem>
+              <ProjectItem>
+                <ProjectName>4</ProjectName>
+                <ProjectDes>MultiLabel Classfication</ProjectDes>
+                <ReadMore>Read More</ReadMore>
+              </ProjectItem>
+            </ProjectItems>
+          </Project>
+          <Project>
+            <ProjectItems>
+              <ProjectItem>
+                <ProjectName>5</ProjectName>
+                <ProjectDes>Facebook Clone</ProjectDes>
+                <ReadMore>Read More</ReadMore>
+              </ProjectItem>
+              <ProjectItem>
+                <ProjectName>6</ProjectName>
+                <ProjectDes>Weather-Todo-List</ProjectDes>
+                <ReadMore>Read More</ReadMore>
+              </ProjectItem>
+            </ProjectItems>
+          </Project>
 
-            <ProjectItem>
-              <ProjectName>6</ProjectName>
-              <ProjectDes>Weather-Todo-List</ProjectDes>
-              <ReadMore>Read More</ReadMore>
-            </ProjectItem>
-          </ProjectItems>
-        </Project>
-
-        <Next margin={margin} onClick={e => next(e)}></Next>
-      </ProjectSlider>
-    </ProjectFrame>
+          <Next margin={margin} onClick={e => next(e)}></Next>
+        </ProjectSlider>
+      </ProjectFrame>
+    </ProjectWrap>
   );
 };

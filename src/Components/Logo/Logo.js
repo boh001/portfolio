@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { LogoFrame, ToggleUp, ToggleDown, Toggle } from "./Logo.style";
 
 export default ({ active, setActive }) => {

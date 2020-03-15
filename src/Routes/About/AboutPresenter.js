@@ -4,7 +4,6 @@ import { padding, center, url, color } from "Components/Global/variable";
 
 const SkillFrame = styled.div`
   flex: none;
-  position: relative;
   width: 100%;
   height: 100%;
   ${center};
@@ -19,8 +18,7 @@ const SkillTheme = styled.div`
 `;
 const SkillSlider = styled.div`
   flex: none;
-  position: relative;
-  width: 500px;
+  width: 400px;
   height: 350px;
   ${center};
   overflow: hidden;
@@ -28,7 +26,7 @@ const SkillSlider = styled.div`
 `;
 const Skill = styled.div`
   flex: none;
-  width: 500px;
+  width: 400px;
   height: 350px;
   display: flex;
   align-items: center;
@@ -42,7 +40,7 @@ const Skillitems = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-gap: 10px;
+  grid-gap: 0px 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 70px;
   padding: 40px 100px 100px 100px;
@@ -89,8 +87,8 @@ const Img = styled.img.attrs(props => ({
 
 const Prev = styled.div`
   cursor: pointer;
-  top: 135px;
-  left: 0px;
+  top: 200px;
+  left: 50px;
   position: absolute;
   z-index: 2;
   &:after {
@@ -100,8 +98,8 @@ const Prev = styled.div`
 `;
 const Next = styled.div`
   cursor: pointer;
-  top: 135px;
-  right: 0px;
+  top: 200px;
+  right: 50px;
   position: absolute;
   z-index: 2;
   &:after {
