@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { color, padding } from "../Global/variable";
 
 export const ContentFrame = styled.div`
-  width: 500px;
+  width: 100%;
   margin-top: ${padding.content};
 `;
 export const Theme = styled.div`

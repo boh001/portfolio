@@ -10,9 +10,7 @@ export default () => {
         <br />
         <br /> I'm <Name>Kim Sang Hyeon</Name>
       </Theme>
-      <Main>
-        kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
-      </Main>
+      <Main></Main>
     </ContentFrame>
   );
 };

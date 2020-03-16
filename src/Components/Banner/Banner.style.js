@@ -5,16 +5,16 @@ export const BannerFrame = styled.div`
   grid-auto-columns: 50px;
   grid-auto-rows: 50px;
   grid-gap: 10px;
-  right: 100px;
+  right: 90px;
   @media screen and (max-width: 768px) {
     grid-auto-flow: column;
     left: 100px;
-    right: 0px;
     bottom: 100px;
   }
 `;
 export const SocialLink = styled.a.attrs(props => ({
-  href: props.url
+  href: props.url,
+  target: "_blank"
 }))`
   border: 1px solid white;
   display: flex;

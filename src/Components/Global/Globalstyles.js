@@ -19,4 +19,25 @@ export const GlobalStyles = createGlobalStyle`
         text-decoration:none;
         color:inherit;
     }
+    input{
+        font-family:inherit;
+        background-color:transparent;
+        border:none;
+        border-bottom:1px solid ;
+        color:inherit;
+        padding-bottom:10px;
+        &:focus {
+      outline: none;
+    }
+    }
+    textarea{
+        font-family:inherit;
+        background-color:transparent;
+        border:none;
+        border-bottom:1px solid ;
+        color:inherit;
+        &:focus {
+      outline: none;
+    }
+    }
 `;

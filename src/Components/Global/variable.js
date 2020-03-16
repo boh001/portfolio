@@ -2,7 +2,8 @@ import { css } from "styled-components";
 
 export const color = {
   black: "#010001",
-  blue: "#40c4ff"
+  blue: "#40c4ff",
+  grey: "#a4b0be"
 };
 export const padding = {
   content: "50px"
