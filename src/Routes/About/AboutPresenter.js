@@ -1,46 +1,23 @@
 import styled from "styled-components";
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
+import Content from "Components/Content/Content";
 import { padding, center, url, color } from "Components/Global/variable";
 
-const SkillFrame = styled.div`
-  flex: none;
+const Skill = styled.div`
   width: 100%;
   height: 100%;
   ${center};
   flex-direction: column;
-  margin-top: ${padding.content};
+  cursor: pointer;
 `;
-const SkillTheme = styled.div`
-  flex: none;
-  font-size: 30px;
-  margin-bottom: 50px;
-  color: ${color.blue};
+const SkillName = styled.div`
+  margin-top: 20px;
 `;
-const SkillSlider = styled.div`
-  flex: none;
-  width: 400px;
-  height: 350px;
-  ${center};
-  overflow: hidden;
-  transition: all ease 1s;
-`;
-const Skill = styled.div`
-  flex: none;
-  width: 400px;
-  height: 350px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
-  transition: all ease 1s;
-  margin-left: ${props => props.first};
-`;
-const SkillName = styled.div``;
 const Skillitems = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-gap: 0px 20px;
+  grid-gap: 20px 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 70px;
   padding: 40px 100px 100px 100px;
@@ -85,47 +62,11 @@ const Img = styled.img.attrs(props => ({
   object-fit: cover;
 `;
 
-const Prev = styled.div`
-  cursor: pointer;
-  top: 200px;
-  left: 50px;
-  position: absolute;
-  z-index: 2;
-  &:after {
-    content: "<<";
-  }
-  ${props => props.margin === 200 && "display: none"}
-`;
-const Next = styled.div`
-  cursor: pointer;
-  top: 200px;
-  right: 50px;
-  position: absolute;
-  z-index: 2;
-  &:after {
-    content: ">>";
-  }
-  ${props => props.margin === -200 && "display: none"}
-`;
 export default React.memo(() => {
-  const [margin, setMargin] = useState(200);
-
-  const prev = useCallback(e => {
-    setMargin(margin + 200);
-  });
-
-  const next = useCallback(e => {
-    setMargin(margin - 200);
-  });
-  console.log("about");
-
   return (
-    <SkillFrame>
-      <SkillTheme>My skills</SkillTheme>
-      <SkillSlider>
-        <Prev margin={margin} onClick={e => prev(e)}></Prev>
-
-        <Skill first={`${margin}%`}>
+    <>
+      <Content mt={"50px"} repeat={"3,100%"} theme={"My skills"}>
+        <Skill>
           <SkillName>Front-end</SkillName>
           <Skillitems>
             <Skillitem>
@@ -170,6 +111,7 @@ export default React.memo(() => {
             </Skillitem>
           </Skillitems>
         </Skill>
+
         <Skill>
           <SkillName>Back-end</SkillName>
           <Skillitems>
@@ -231,8 +173,10 @@ export default React.memo(() => {
               </Item>
             </Skillitem>
             <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
+              <ItemName>linux</ItemName>
+              <Item>
+                <Img url={url.linux} />
+              </Item>
             </Skillitem>
             <Skillitem>
               <ItemName>none</ItemName>
@@ -252,8 +196,7 @@ export default React.memo(() => {
             </Skillitem>
           </Skillitems>
         </Skill>
-        <Next onClick={e => next(e)} margin={margin}></Next>
-      </SkillSlider>
-    </SkillFrame>
+      </Content>
+    </>
   );
 });

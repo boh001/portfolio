@@ -1,20 +1,6 @@
 import styled from "styled-components";
-
-const Frame = styled.div`
-  flex: none;
-  width: 100%;
-  height: 100%;
-  ${center};
-  flex-direction: column;
-  margin-top: ${padding.content};
-`;
-const Theme = styled.div`
-  flex: none;
-  font-size: 30px;
-  margin-bottom: 50px;
-  color: ${color.blue};
-`;
-const Slider = styled.div`
+import { padding, center, color } from "Components/Global/variable";
+export const Slider = styled.div`
   flex: none;
   width: 400px;
   height: 350px;
@@ -22,86 +8,65 @@ const Slider = styled.div`
   overflow: hidden;
   transition: all ease 1s;
 `;
-const Wrap = styled.div`
+
+export const Wrap = styled.div`
   flex: none;
-  width: 400px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
+  ${center};
+  margin-top: ${props => props.mt};
+  flex-direction: column;
+`;
+export const Frame = styled.div`
+  position: relative;
+  width: 500px;
+  height: 400px;
+  ${center};
+  flex-direction: column;
+`;
+export const Content = styled.div`
+  flex: none;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+  justify-content: center;
   transition: all ease 1s;
   margin-left: ${props => props.first};
 `;
-const Name = styled.div``;
-const items = styled.div`
+export const Items = styled.div`
   display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-gap: 0px 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 70px;
-  padding: 40px 100px 100px 100px;
+  grid-template-columns: repeat(${props => props.repeat});
+  grid-auto-rows: 1fr;
+  grid-auto-rows: column;
   width: 100%;
   height: 100%;
 `;
-const ItemName = styled.div`
-  ${center};
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  visibility: hidden;
-  opacity: 0;
-  font-size: 10px;
-  transition: all ease 0.5s;
-`;
-const item = styled.div`
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  &:hover ${ItemName} {
-    visibility: visible;
-    opacity: 1;
-  }
-`;
-
-const Item = styled.div`
-  ${center};
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #a4b0be;
-`;
-const Img = styled.img.attrs(props => ({
-  src: props.url
-}))`
-  width: 55%;
-  height: 55%;
-  object-fit: cover;
-`;
-
-const Prev = styled.div`
+export const Prev = styled.div`
   cursor: pointer;
   top: 200px;
-  left: 50px;
+  left: 0px;
   position: absolute;
   z-index: 2;
   &:after {
     content: "<<";
   }
-  ${props => props.margin === 200 && "display: none"}
+  ${props => props.margin === 0 && "display: none"}
 `;
-const Next = styled.div`
+export const Next = styled.div`
   cursor: pointer;
   top: 200px;
-  right: 50px;
+  right: 0px;
   position: absolute;
   z-index: 2;
   &:after {
     content: ">>";
   }
-  ${props => props.margin === -200 && "display: none"}
+  ${props => props.margin === -400 && "display: none"}
+`;
+export const Theme = styled.div`
+  flex: none;
+  font-size: 30px;
+  color: ${color.blue};
+  margin-bottom: 20px;
 `;
