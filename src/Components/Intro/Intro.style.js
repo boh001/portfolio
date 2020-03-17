@@ -19,7 +19,11 @@ export const Name = styled.span`
 `;
 export const Main = styled.p`
   font-size: 15px;
-  word-wrap: break-word;
-  word-break: keep-all;
-  width: 100%;
+  word-wrap: normal;
+  word-break: normal;
+  width: 500px;
+  line-height: 25px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;

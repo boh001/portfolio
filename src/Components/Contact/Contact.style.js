@@ -89,7 +89,6 @@ export const SocialLink = styled.a.attrs(props => ({
   }
 `;
 export const Ment = styled.div`
-  color: ${color.blue};
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 60px;

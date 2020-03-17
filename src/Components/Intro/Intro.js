@@ -10,7 +10,11 @@ export default () => {
         <br />
         <br /> I'm <Name>Kim Sang Hyeon</Name>
       </Theme>
-      <Main></Main>
+      <Main>
+        I majored in industrial engineering and studied deep learning. But I'm
+        interested in web development and I'm currently studying for front-end
+        developers.
+      </Main>
     </ContentFrame>
   );
 };

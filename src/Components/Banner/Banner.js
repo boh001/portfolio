@@ -12,10 +12,10 @@ export default () => {
 
   return (
     <BannerFrame>
-      <SocialLink to="#">
+      <SocialLink url="https://www.facebook.com/profile.php?id=100004682232589">
         <FontAwesomeIcon icon={faFacebookF} size={"lg"} />
       </SocialLink>
-      <SocialLink to="#">
+      <SocialLink url="https://www.instagram.com/sanghyeon3751/?hl=ko">
         <FontAwesomeIcon icon={faInstagram} size={"lg"} />
       </SocialLink>
       <SocialLink url={"https://www.github.com/boh001"}>
