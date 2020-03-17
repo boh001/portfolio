@@ -9,7 +9,17 @@ export default () => {
       {projects.map((p, key) => {
         return (
           <>
-            <Project key={key} name={p.id} des={p.des} />
+            <Project
+              key={key}
+              name={p.id}
+              des={p.des}
+              detail={p.detail}
+              img={p.img}
+              ctg={p.ctg}
+              github={p.github}
+              member={p.member}
+              period={p.period}
+            />
           </>
         );
       })}

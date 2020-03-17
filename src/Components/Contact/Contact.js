@@ -16,9 +16,17 @@ import {
   Ment
 } from "./Contact.style";
 export default () => {
-  const [write, setWrite] = useState(false);
-  const OnWrite = useCallback(e => {
-    setWrite(true);
+  const [writeName, setWriteName] = useState(false);
+  const OnWriteName = useCallback(e => {
+    setWriteName(true);
+  });
+  const [writeEmail, setWriteEmail] = useState(false);
+  const OnWriteEmail = useCallback(e => {
+    setWriteEmail(true);
+  });
+  const [writeMsg, setWriteMsg] = useState(false);
+  const OnWriteMsg = useCallback(e => {
+    setWriteMsg(true);
   });
   return (
     <>
@@ -26,19 +34,19 @@ export default () => {
         <Form>
           <Ment>Contact Us</Ment>
           <FormInput
-            write={write}
+            write={writeName}
             ph={"Write your Name"}
-            onChange={e => OnWrite(e)}
+            onChange={e => OnWriteName(e)}
           />
           <FormInput
-            write={write}
+            write={writeEmail}
             ph={"Write your Email"}
-            onChange={e => OnWrite(e)}
+            onChange={e => OnWriteEmail(e)}
           />
           <FormMsg
-            write={write}
+            write={writeMsg}
             ph={"Write your message"}
-            onChange={e => OnWrite(e)}
+            onChange={e => OnWriteMsg(e)}
           />
           <FormSubmit />
           <Social>

@@ -122,8 +122,10 @@ export default React.memo(() => {
               </Item>
             </Skillitem>
             <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
+              <ItemName>express</ItemName>
+              <Item>
+                <Img url={url.express} />
+              </Item>
             </Skillitem>
             <Skillitem>
               <ItemName>none</ItemName>
@@ -179,12 +181,16 @@ export default React.memo(() => {
               </Item>
             </Skillitem>
             <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
+              <ItemName>docker</ItemName>
+              <Item>
+                <Img url={url.docker} />
+              </Item>
             </Skillitem>
             <Skillitem>
-              <ItemName>none</ItemName>
-              <Item></Item>
+              <ItemName>python</ItemName>
+              <Item>
+                <Img url={url.python} />
+              </Item>
             </Skillitem>
             <Skillitem>
               <ItemName>none</ItemName>

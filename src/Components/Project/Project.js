@@ -5,8 +5,9 @@ import {
   ReadMore,
   ProjectItem
 } from "./Project.style";
-import ProjectDetail from "Components/Detail/Detail";
-export default ({ name, des }) => {
+import Detail from "Components/Detail/Detail";
+
+export default ({ name, des, detail, img, ctg, github, member, period }) => {
   const [active, setActive] = useState(false);
   const showDetail = useCallback(e => {
     setActive(!active);
@@ -14,7 +15,15 @@ export default ({ name, des }) => {
   return (
     <ProjectItem onClick={e => showDetail(e)} active={active}>
       {active ? (
-        <ProjectDetail />
+        <Detail
+          name={des}
+          detail={detail}
+          img={img}
+          ctg={ctg}
+          github={github}
+          member={member}
+          period={period}
+        />
       ) : (
         <>
           <ProjectName active={active}>{name}</ProjectName>

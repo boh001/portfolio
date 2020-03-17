@@ -31,14 +31,11 @@ export const FormInput = styled.input.attrs(props => ({
 }))`
   width: 60%;
   margin-bottom: 30px;
-  ${props => props.write && "color:white;"}
+  ${props => props.write && "color:white; "}
   &::placeholder {
-    color: #57606f;
+    color: inherit;
   }
   &:focus {
-    color: white;
-  }
-  &:focus::placeholder {
     color: white;
   }
 `;
@@ -51,12 +48,9 @@ export const FormMsg = styled.textarea.attrs(props => ({
   margin-top: 30px;
   ${props => props.write && "color:white;"}
   &::placeholder {
-    color: #57606f;
+    color: inherit;
   }
   &:focus {
-    color: white;
-  }
-  &:focus::placeholder {
     color: white;
   }
 `;
