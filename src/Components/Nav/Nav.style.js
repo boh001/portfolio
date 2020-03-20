@@ -6,8 +6,8 @@ export const NavFrame = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  width: 350px;
-  height: 100vh;
+  width: 500px;
+  min-height: 100vh;
   z-index: 1;
   background-color: ${color.blue};
   display: flex;
@@ -21,11 +21,11 @@ export const LinkFrame = styled.div`
   align-items: flex-start;
 `;
 export const NavLink = styled(Link)`
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   @media screen and (max-width: 768px) {
-    font-size: 20px;
+    font-size: 35px;
   }
 `;

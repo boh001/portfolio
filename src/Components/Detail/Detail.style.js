@@ -13,7 +13,7 @@ export const ProjectDetail = styled.div`
   background-color: white;
   padding: 30px 10px 30px 10px;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 24px;
   border-radius: 5px;
 `;
 export const DetailMain = styled.div`
@@ -43,7 +43,7 @@ export const MainName = styled.div`
 export const MainCtg = styled.div`
   color: ${color.blue};
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 20px;
 `;
 
 export const MainGit = styled.div``;
@@ -54,7 +54,7 @@ export const MainPeriod = styled.div``;
 export const MainDetail = styled.div`
   word-wrap: break-word;
   word-break: keep-all;
-  font-size: 10px;
+  font-size: 20px;
   height: 100%;
   background-color: red;
 `;

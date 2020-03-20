@@ -10,7 +10,7 @@ import {
   Items,
   Theme
 } from "./Content.style";
-export default ({ mt, theme, repeat, children }) => {
+export default ({ top, h, theme, repeat, children }) => {
   const [margin, setMargin] = useState(0);
   const prev = useCallback(e => {
     setMargin(margin + 200);
@@ -20,17 +20,15 @@ export default ({ mt, theme, repeat, children }) => {
     setMargin(margin - 200);
   });
   return (
-    <Wrap mt={mt}>
-      <Frame>
-        <Theme>{theme}</Theme>
-        <Slider>
-          <Prev margin={margin} onClick={e => prev(e)}></Prev>
-          <Content first={`${margin}%`}>
-            <Items repeat={repeat}>{children}</Items>
-          </Content>
-          <Next margin={margin} onClick={e => next(e)}></Next>
-        </Slider>
-      </Frame>
-    </Wrap>
+    <Frame>
+      <Theme>{theme}</Theme>
+      <Slider h={h}>
+        <Prev margin={margin} onClick={e => prev(e)} top={top}></Prev>
+        <Content first={`${margin}%`}>
+          <Items repeat={repeat}>{children}</Items>
+        </Content>
+        <Next margin={margin} onClick={e => next(e)} top={top}></Next>
+      </Slider>
+    </Frame>
   );
 };

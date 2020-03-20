@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const LogoFrame = styled.div`
   position: absolute;
   top: 50px;
+  left: 100px;
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import React, { useCallback, useState } from "react";
+import React from "react";
 import Content from "Components/Content/Content";
-import { padding, center, url, color } from "Components/Global/variable";
+import { center, url } from "Components/Global/variable";
 
 const Skill = styled.div`
   width: 100%;
@@ -11,15 +11,15 @@ const Skill = styled.div`
   cursor: pointer;
 `;
 const SkillName = styled.div`
-  margin-top: 20px;
+  font-size: 30px;
 `;
 const Skillitems = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-gap: 20px 20px;
+  grid-gap: 0px 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 70px;
+  grid-template-rows: 140px;
   padding: 40px 100px 100px 100px;
   width: 100%;
   height: 100%;
@@ -30,7 +30,7 @@ const ItemName = styled.div`
   text-transform: uppercase;
   visibility: hidden;
   opacity: 0;
-  font-size: 10px;
+  font-size: 20px;
   transition: all ease 0.5s;
 `;
 const Skillitem = styled.div`
@@ -49,8 +49,8 @@ const Skillitem = styled.div`
 
 const Item = styled.div`
   ${center};
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #a4b0be;
 `;
@@ -65,7 +65,7 @@ const Img = styled.img.attrs(props => ({
 export default React.memo(() => {
   return (
     <>
-      <Content mt={"50px"} repeat={"3,100%"} theme={"My skills"}>
+      <Content repeat={"3,100%"} theme={"My skills"} h={350} top={335}>
         <Skill>
           <SkillName>Front-end</SkillName>
           <Skillitems>

@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { padding, center, color } from "Components/Global/variable";
+import { center, color } from "Components/Global/variable";
 export const Slider = styled.div`
   flex: none;
-  width: 400px;
-  height: 350px;
+  width: 800px;
+  height: ${props => `${props.h}px`};
   ${center};
   overflow: hidden;
   transition: all ease 1s;
@@ -18,19 +18,18 @@ export const Wrap = styled.div`
   flex-direction: column;
 `;
 export const Frame = styled.div`
-  position: relative;
-  width: 500px;
-  height: 400px;
+  flex: none;
   ${center};
+  position: relative;
+  width: 1000px;
+
+  height: 100%;
   flex-direction: column;
 `;
 export const Content = styled.div`
-  flex: none;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${center};
   transition: all ease 1s;
   margin-left: ${props => props.first};
 `;
@@ -44,7 +43,8 @@ export const Items = styled.div`
 `;
 export const Prev = styled.div`
   cursor: pointer;
-  top: 200px;
+  font-size: 50px;
+  top: ${props => `${props.top}px`};
   left: 0px;
   position: absolute;
   z-index: 2;
@@ -55,8 +55,9 @@ export const Prev = styled.div`
 `;
 export const Next = styled.div`
   cursor: pointer;
-  top: 200px;
-  right: 0px;
+  font-size: 50px;
+  top: ${props => `${props.top}px`};
+  right: 0;
   position: absolute;
   z-index: 2;
   &:after {
@@ -65,8 +66,7 @@ export const Next = styled.div`
   ${props => props.margin === -400 && "display: none"}
 `;
 export const Theme = styled.div`
-  flex: none;
-  font-size: 30px;
+  font-size: 60px;
   color: ${color.blue};
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 `;

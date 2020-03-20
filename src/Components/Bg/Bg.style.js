@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { center } from "Components/Global/variable";
 export const Bg = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 100px;
-  position: fixed;
+  position: relative;
   z-index: 2;
   background-color: #010001;
-  transition: all ease 0.5s;
+  ${center};
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
   ${props =>
-    props.active && " transition: all ease 0.5s; transform: translateX(-350px)"}
+    props.active && " transition: all ease 0.5s; transform: translateX(-500px)"}
 `;

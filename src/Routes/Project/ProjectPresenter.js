@@ -5,7 +5,7 @@ import Project from "Components/Project/Project";
 
 export default () => {
   return (
-    <Content repeat={"6,50%"}>
+    <Content repeat={"6,50%"} h={800} top={450}>
       {projects.map((p, key) => {
         return (
           <>

@@ -14,12 +14,12 @@ export const Wrap = styled.div`
 export const Form = styled.form.attrs({
   action: `mailto:boh001g@gmail.com`,
   method: "post",
-  enctype: "text/plain",
-  acceptCharset: "UTF-8",
+  encType: "text/plain",
+  acceptCharset: "EUC-KR",
   autoComplete: "off"
 })`
-  height: 100%;
-  width: 500px;
+  height: 1000px;
+  width: 1000px;
   ${center};
   flex-direction: column;
 `;
@@ -30,7 +30,7 @@ export const FormInput = styled.input.attrs(props => ({
   name: "수신자"
 }))`
   width: 60%;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   ${props => props.write && "color:white; "}
   &::placeholder {
     color: inherit;
@@ -45,7 +45,7 @@ export const FormMsg = styled.textarea.attrs(props => ({
   name: "message"
 }))`
   width: 60%;
-  margin-top: 30px;
+  margin-top: 60px;
   ${props => props.write && "color:white;"}
   &::placeholder {
     color: inherit;
@@ -60,20 +60,20 @@ export const FormSubmit = styled.input.attrs({
 })`
   cursor: pointer;
   border: none;
-  margin-top: 30px;
-  margin-left: 245px;
-  font-size: 15px;
+  margin-top: 60px;
+  margin-left: 500px;
+  font-size: 30px;
   color: white;
   &:hover {
     color: ${color.blue};
   }
 `;
 export const Social = styled.div`
-  margin-top: 30px;
+  margin-top: 60px;
   width: 50%;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-auto-rows: 50px;
+  grid-auto-rows: 100px;
   grid-auto-flow: column;
 `;
 export const SocialLink = styled.a.attrs(props => ({
@@ -83,13 +83,14 @@ export const SocialLink = styled.a.attrs(props => ({
   display: flex;
   align-items: center;
   justify-content: center;
-
+  font-size: 40px;
   &:hover {
     color: white;
   }
 `;
 export const Ment = styled.div`
-  font-size: 30px;
+  color: white;
+  font-size: 60px;
   font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 `;
