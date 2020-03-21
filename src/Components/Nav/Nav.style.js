@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { color, center } from "../Global/variable";
 
 export const NavFrame = styled.div`
-  position: fixed;
+  position: absolute;
   z-index: 1;
   background-color: ${color.blue};
   display: flex;

@@ -5,16 +5,26 @@ export const GlobalStyles = createGlobalStyle`
     ${reset};
    
     *{
-        box-sizing:border-box;
+        -moz-box-sizing: border-box; /* Firefox  */
+
+        -webkit-box-sizing: border-box; /* Safari */
+
+        box-sizing: border-box; /* CSS3 Standard */
+
+
+
+
+
     }
     body{
+
         color:white;
         font-family: 'Poppins', sans-serif;
 
     }
-    html{
 
-    }
+
+
     a{
         text-decoration:none;
         color:inherit;
