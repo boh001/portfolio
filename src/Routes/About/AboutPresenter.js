@@ -17,7 +17,7 @@ const Skillitems = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-gap: 0px 20px;
+  grid-gap: 0px 10px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 140px;
   padding: 40px 100px 100px 100px;

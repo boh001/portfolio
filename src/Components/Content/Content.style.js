@@ -69,4 +69,7 @@ export const Theme = styled.div`
   font-size: 60px;
   color: ${color.blue};
   margin-bottom: 80px;
+  @media screen and (max-width: 1024px) {
+    color: red;
+  }
 `;

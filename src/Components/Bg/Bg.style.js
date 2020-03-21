@@ -4,7 +4,7 @@ export const Bg = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 100px;
-  position: relative;
+  position: fixed;
   z-index: 2;
   background-color: #010001;
   ${center};

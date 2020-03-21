@@ -10,7 +10,8 @@ import {
   MainDetail,
   MainMem,
   MainPeriod,
-  SocialLink
+  SocialLink,
+  Wrap
 } from "./Detail.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -27,17 +28,16 @@ export default ({ name, img, ctg, detail, github, member, period }) => {
           <MainName>{name}</MainName>
           <MainMem>{member}</MainMem>
           <MainPeriod>{period}</MainPeriod>
-          <SocialLink url={github}>
+          {/* <SocialLink url={github}>
             <FontAwesomeIcon icon={faGithub} size={"4x"} />
-          </SocialLink>
+          </SocialLink> */}
+          <MainDetail>
+            {detail}
+            2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+          </MainDetail>
         </MainDes>
       </DetailMain>
-      <DetailSub>
-        <MainDetail>
-          {detail}
-          2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
-        </MainDetail>
-      </DetailSub>
+      {/* <DetailSub></DetailSub> */}
     </ProjectDetail>
   );
 };

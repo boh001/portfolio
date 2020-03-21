@@ -28,7 +28,7 @@ export default ({ name, des, detail, img, ctg, github, member, period }) => {
         <>
           <ProjectName active={active}>{name}</ProjectName>
           <ProjectDes active={active}>{des}</ProjectDes>
-          <ReadMore>Read More</ReadMore>
+          <ReadMore active={active}>Read More</ReadMore>
         </>
       )}
     </ProjectItem>

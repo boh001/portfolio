@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     des: "Document Classification",
     detail: "",
-    img: "https://pbs.twimg.com/media/DdKR0ZOX4AEl_0N.jpg",
+    img: "https://miro.medium.com/max/327/1*keqyBCQ5FL6A7DZLrXamvQ.png",
     ctg: "nlp",
     github: "#",
     member: "team",

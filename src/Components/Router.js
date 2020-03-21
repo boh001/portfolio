@@ -18,6 +18,7 @@ export default () => {
   console.log("router");
   const [page, setPage] = useState("");
   const [active, setActive] = useState(false);
+  console.log(window.innerWidth);
   return (
     <Router>
       <Bg active={active}>

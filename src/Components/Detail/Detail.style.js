@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { center, color } from "Components/Global/variable";
 
 export const ProjectDetail = styled.div`
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 3;
+  height: 70%;
   position: absolute;
   color: black;
+  z-index: 3;
+  top: 170px;
+  left: 0;
   ${center}
   background-color: white;
   padding: 30px 10px 30px 10px;
@@ -19,19 +19,19 @@ export const ProjectDetail = styled.div`
 export const DetailMain = styled.div`
   display: flex;
   width: 100%;
-  height: 75%;
+  height: 100%;
 `;
 export const MainImg = styled.img.attrs(props => ({
   src: props.url
 }))`
   padding: 10px;
-  width: 75%;
+  width: 35%;
   height: 100%;
   background-size: cover;
 `;
 export const MainDes = styled.div`
   padding: 10px 15px 10px 15px;
-  width: 25%;
+  width: 65%;
   height: 100%;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
@@ -56,7 +56,6 @@ export const MainDetail = styled.div`
   word-break: keep-all;
   font-size: 20px;
   height: 100%;
-  background-color: red;
 `;
 export const DetailSub = styled.div`
   padding: 10px 0px 0px 10px;
@@ -82,4 +81,15 @@ export const SocialLink = styled.a.attrs(props => ({
   -ms-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+`;
+export const Wrap = styled.div`
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  position: absolute;
+  ${center};
+  background-color: black;
 `;
