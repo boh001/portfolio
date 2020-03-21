@@ -39,4 +39,12 @@ export const ProjectItem = styled.div`
     background-color: black;
     color: white;
   }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 50px;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 25px;
+    padding: 20px;
+  }
 `;

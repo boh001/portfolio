@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { center, color } from "Components/Global/variable";
 
 export const ProjectDetail = styled.div`
-  width: 100%;
+  width: 650px;
   height: 70%;
   position: absolute;
   color: black;
@@ -15,6 +15,13 @@ export const ProjectDetail = styled.div`
   flex-direction: column;
   font-size: 24px;
   border-radius: 5px;
+  @media screen and (max-width: 768px) {
+    width: 500px;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 25px;
+    padding: 20px;
+  }
 `;
 export const DetailMain = styled.div`
   display: flex;

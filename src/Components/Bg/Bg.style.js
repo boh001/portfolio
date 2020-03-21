@@ -6,9 +6,12 @@ export const Bg = styled.div`
   position: relative;
   z-index: 2;
   background-color: #010001;
+  min-height: 100vh;
   ${center};
-  @media screen and (min-width: 768px) {
-    min-height: 100vh;
+  @media screen and (min-width: 769px) {
+    ${props =>
+      props.active &&
+      "transition: all ease 0.5s; transform: translateX(-500px)"}
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -18,6 +21,4 @@ export const Bg = styled.div`
     font-size: 25px;
     padding: 20px;
   }
-  ${props =>
-    props.active && " transition: all ease 0.5s; transform: translateX(-500px)"}
 `;
