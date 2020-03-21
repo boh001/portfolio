@@ -8,13 +8,14 @@ const Img = styled.img.attrs({
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png"
 })`
   position: absolute;
-  width: 1500px;
-  height: 1200px;
+  width: 100%;
+  height: 90%;
   opacity: 0.1;
   background-size: cover;
+  z-index: -1;
   @media screen and (max-width: 768px) {
-    width: 700px;
-    height: 600px;
+    width: 60%;
+    height: 50%;
   }
 `;
 export default React.memo(() => {

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { center, color } from "Components/Global/variable";
 export const Slider = styled.div`
   flex: none;
-  width: 800px;
+  width: 768px;
   height: ${props => `${props.h}px`};
   ${center};
   overflow: hidden;
@@ -21,7 +21,7 @@ export const Frame = styled.div`
   flex: none;
   ${center};
   position: relative;
-  width: 1000px;
+  width: 100%;
 
   height: 100%;
   flex-direction: column;

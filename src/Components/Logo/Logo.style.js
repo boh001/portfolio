@@ -8,6 +8,9 @@ export const LogoFrame = styled.div`
   font-weight: bold;
   text-transform: uppercase;
   display: flex;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ToggleUp = styled.div`
@@ -30,4 +33,8 @@ export const Toggle = styled.div`
   cursor: pointer;
   right: 100px;
   top: 60px;
+  z-index: 999;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
