@@ -30,7 +30,7 @@ export default () => {
   });
   return (
     <>
-      <Wrap mt={"30px"}>
+      <Wrap mt={"100px"}>
         <Form>
           <Ment>Contact Us</Ment>
           <FormInput

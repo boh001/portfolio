@@ -5,18 +5,18 @@ export const Wrap = styled.div`
   position: relative;
   flex: none;
   width: 700px;
-  min-height: 100vh;
+  height: 100%;
   font-size: 50px;
   ${center};
   margin-top: ${props => props.mt};
   flex-direction: column;
   color: #57606f;
   @media screen and (max-width: 768px) {
-    padding-top: 50px;
+    margin-top: ${props => props.mt / 2};
     width: 460px;
   }
   @media screen and (max-width: 478px) {
-    padding-top: 50px;
+    margin-top: ${props => props.mt / 4};
     width: 310px;
   }
 `;

@@ -16,7 +16,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-export default ({ name, img, ctg, detail, github, member, period }) => {
+export default ({ name, img, ctg, detail, member, period }) => {
   console.log(img);
 
   return (

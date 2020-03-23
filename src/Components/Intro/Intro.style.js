@@ -3,7 +3,7 @@ import { color, padding } from "../Global/variable";
 
 export const ContentFrame = styled.div`
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   margin-top: ${padding.content};
   font-size: 50px;
   @media screen and (max-width: 768px) {

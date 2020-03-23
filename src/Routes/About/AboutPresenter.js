@@ -12,6 +12,12 @@ const Skill = styled.div`
 `;
 const SkillName = styled.div`
   font-size: 30px;
+  @media screen and (max-width: 768px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 15px;
+  }
 `;
 const Skillitems = styled.div`
   display: grid;
@@ -23,6 +29,12 @@ const Skillitems = styled.div`
   padding: 40px 100px 100px 100px;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 768px) {
+    grid-template-rows: 100px;
+  }
+  @media screen and (max-width: 478px) {
+    grid-template-rows: 70px;
+  }
 `;
 const ItemName = styled.div`
   ${center};
@@ -32,6 +44,12 @@ const ItemName = styled.div`
   opacity: 0;
   font-size: 20px;
   transition: all ease 0.5s;
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 10px;
+  }
 `;
 const Skillitem = styled.div`
   display: flex;
@@ -53,6 +71,14 @@ const Item = styled.div`
   height: 100px;
   border-radius: 50%;
   background-color: #a4b0be;
+  @media screen and (max-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (max-width: 478px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 const Img = styled.img.attrs(props => ({
   src: props.url
@@ -65,7 +91,7 @@ const Img = styled.img.attrs(props => ({
 export default React.memo(() => {
   return (
     <>
-      <Content repeat={"3,100%"} theme={"My skills"} h={350} top={335}>
+      <Content repeat={"3,100%"} theme={"My skills"} h={350} top={320}>
         <Skill>
           <SkillName>Front-end</SkillName>
           <Skillitems>

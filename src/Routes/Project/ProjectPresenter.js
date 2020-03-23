@@ -1,11 +1,28 @@
 import React from "react";
-import Content from "Components/Content/Content";
 import { projects } from "project";
 import Project from "Components/Project/Project";
-
+import styled from "styled-components";
+const Wrap = styled.div`
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 400px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 250px;
+    margin-top: 100px;
+  }
+  @media screen and (max-width: 478px) {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: 150px;
+    margin-top: 50px;
+  }
+`;
 export default () => {
   return (
-    <Content repeat={"6,50%"} h={800} top={450}>
+    <Wrap>
       {projects.map((p, key) => {
         return (
           <>
@@ -23,6 +40,6 @@ export default () => {
           </>
         );
       })}
-    </Content>
+    </Wrap>
   );
 };
