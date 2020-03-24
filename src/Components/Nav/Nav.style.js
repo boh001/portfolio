@@ -10,7 +10,7 @@ export const NavFrame = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     top: 0;
     right: 0;
     width: 500px;

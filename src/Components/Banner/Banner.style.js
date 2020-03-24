@@ -2,18 +2,21 @@ import styled from "styled-components";
 export const BannerFrame = styled.div`
   position: absolute;
   display: grid;
-  grid-auto-columns: 100px;
-  grid-auto-rows: 100px;
   grid-gap: 10px;
   font-size: 35px;
   @media screen and (min-width: 768px) {
+    grid-auto-columns: 100px;
+    grid-auto-rows: 100px;
     right: 90px;
     top: 500px;
   }
   @media screen and (max-width: 768px) {
+    grid-auto-columns: 70px;
+    grid-auto-rows: 70px;
     grid-auto-flow: column;
     bottom: 0;
-    left: 100px;
+    font-size: 25px;
+    left: 50%;
   }
   @media screen and (max-width: 478px) {
     grid-auto-columns: 1fr;

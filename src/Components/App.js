@@ -1,12 +1,12 @@
 import React from "react";
-import Router from "./Router";
+import InitRouter from "./InitRouter";
 import { GlobalStyles } from "./Global/Globalstyles";
 
 export default () => {
   return (
     <>
       <GlobalStyles />
-      <Router />
+      <InitRouter />
     </>
   );
 };

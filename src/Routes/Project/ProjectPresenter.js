@@ -28,6 +28,7 @@ export default () => {
           <>
             <Project
               key={key}
+              id={key}
               name={p.id}
               des={p.des}
               detail={p.detail}

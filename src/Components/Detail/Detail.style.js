@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { center, color } from "Components/Global/variable";
 
 export const ProjectDetail = styled.div`
-  width: 650px;
-  height: 70%;
+  width: 50%;
+  height: 50%;
   position: absolute;
   color: black;
   z-index: 3;
-  top: 170px;
-  left: 0;
+  // top: 50%;
+  // left: 50%;
   ${center}
   background-color: white;
   padding: 30px 10px 30px 10px;
@@ -16,11 +16,11 @@ export const ProjectDetail = styled.div`
   font-size: 24px;
   border-radius: 5px;
   @media screen and (max-width: 768px) {
-    width: 500px;
+    // width: 500px;
   }
   @media screen and (max-width: 478px) {
     font-size: 25px;
-    padding: 20px;
+    // padding: 20px;
   }
 `;
 export const DetailMain = styled.div`

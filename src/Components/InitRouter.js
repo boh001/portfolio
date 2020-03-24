@@ -7,7 +7,7 @@ import {
 import React, { useState } from "react";
 import Home from "Routes/Home";
 import About from "Routes/About";
-import Project from "Routes/Project";
+import Projects from "./Routers/Projects";
 import Contact from "Routes/Contact";
 import Nav from "Components/Nav/Nav";
 import { Page } from "store";
@@ -26,9 +26,9 @@ export default () => {
         <Page>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/project" exact component={Project} />
-            <Route path="/contact" exact component={Contact} />
+            <Route path="/about" component={About} />
+            <Route path="/project" component={Projects} />
+            <Route path="/contact" component={Contact} />
           </Switch>
         </Page>
       </Bg>

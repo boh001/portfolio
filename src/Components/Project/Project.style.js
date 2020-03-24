@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { center, color } from "Components/Global/variable";
+import { Link } from "react-router-dom";
 
 export const ProjectName = styled.div`
   font-weight: bold;
@@ -33,7 +34,7 @@ export const ReadMore = styled.div`
     height: 25px;
   }
 `;
-export const ProjectItem = styled.div`
+export const ProjectItem = styled(Link)`
   font-size: 100px;
   width: 100%;
   height: 100%;
