@@ -4,7 +4,7 @@ import { center, color } from "Components/Global/variable";
 export const Wrap = styled.div`
   position: relative;
   flex: none;
-  width: 100%;
+  width: 700px;
   height: 100%;
   font-size: 50px;
   ${center};
@@ -13,9 +13,11 @@ export const Wrap = styled.div`
   color: #57606f;
   @media screen and (max-width: 768px) {
     margin-top: ${props => props.mt / 2};
+    width: 400px;
   }
   @media screen and (max-width: 478px) {
     margin-top: ${props => props.mt / 4};
+    width: 100%;
   }
 `;
 export const Form = styled.form.attrs({
