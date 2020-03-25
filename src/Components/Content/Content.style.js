@@ -69,11 +69,11 @@ export const Prev = styled.div`
     content: "<<";
   }
   @media screen and (max-width: 768px) {
-    top: ${props => `${props.top - 40}px`};
+    top: ${props => `${props.top - 50}px`};
     font-size: 40px;
   }
   @media screen and (max-width: 478px) {
-    top: ${props => `${props.top - 90}px`};
+    top: ${props => `${props.top - 100}px`};
     font-size: 25px;
   }
 `;
@@ -89,11 +89,11 @@ export const Next = styled.div`
     content: ">>";
   }
   @media screen and (max-width: 768px) {
-    top: ${props => `${props.top - 40}px`};
+    top: ${props => `${props.top - 50}px`};
     font-size: 40px;
   }
   @media screen and (max-width: 478px) {
-    top: ${props => `${props.top - 90}px`};
+    top: ${props => `${props.top - 100}px`};
     font-size: 25px;
   }
 `;

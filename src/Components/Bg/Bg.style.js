@@ -18,6 +18,6 @@ export const Bg = styled.div`
   }
   @media screen and (max-width: 478px) {
     font-size: 25px;
-    padding: 20px;
+    padding: 10px;
   }
 `;

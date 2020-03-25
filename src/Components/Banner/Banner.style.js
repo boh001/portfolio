@@ -7,8 +7,8 @@ export const BannerFrame = styled.div`
   @media screen and (min-width: 768px) {
     grid-auto-columns: 100px;
     grid-auto-rows: 100px;
-    right: 90px;
-    top: 500px;
+    right: 4.5%;
+    top: 40%;
   }
   @media screen and (max-width: 768px) {
     grid-auto-columns: 70px;

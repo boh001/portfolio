@@ -14,30 +14,38 @@ import {
   Wrap
 } from "./Detail.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { useCallback } from "react";
+import { withRouter } from "react-router-dom";
 
-export default ({ name, img, ctg, detail, member, period }) => {
-  console.log(img);
+export default withRouter(
+  ({ history, name, img, ctg, detail, member, period }) => {
+    const goBack = useCallback(e => {
+      history.goBack();
+    });
 
-  return (
-    <ProjectDetail>
-      <DetailMain>
-        <MainImg url={img} />
-        <MainDes>
-          <MainCtg>{ctg}</MainCtg>
-          <MainName>{name}</MainName>
-          <MainMem>{member}</MainMem>
-          <MainPeriod>{period}</MainPeriod>
-          {/* <SocialLink url={github}>
+    return (
+      <>
+        <Wrap onClick={e => goBack()}>
+          <FontAwesomeIcon icon={faArrowLeft} size={"1x"} />
+        </Wrap>
+        <ProjectDetail>
+          <DetailMain>
+            <MainImg url={img} />
+            <MainDes>
+              <MainCtg>{ctg}</MainCtg>
+              <MainName>{name}</MainName>
+              <MainMem>{member}</MainMem>
+              <MainPeriod>{period}</MainPeriod>
+              {/* <SocialLink url={github}>
             <FontAwesomeIcon icon={faGithub} size={"4x"} />
           </SocialLink> */}
-          <MainDetail>
-            {detail}
-            2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
-          </MainDetail>
-        </MainDes>
-      </DetailMain>
-      {/* <DetailSub></DetailSub> */}
-    </ProjectDetail>
-  );
-};
+              <MainDetail>{detail}</MainDetail>
+            </MainDes>
+          </DetailMain>
+          {/* <DetailSub></DetailSub> */}
+        </ProjectDetail>
+      </>
+    );
+  }
+);

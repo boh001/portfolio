@@ -4,7 +4,7 @@ import { center, color } from "Components/Global/variable";
 export const Wrap = styled.div`
   position: relative;
   flex: none;
-  width: 700px;
+  width: 100%;
   height: 100%;
   font-size: 50px;
   ${center};
@@ -13,19 +13,16 @@ export const Wrap = styled.div`
   color: #57606f;
   @media screen and (max-width: 768px) {
     margin-top: ${props => props.mt / 2};
-    width: 460px;
   }
   @media screen and (max-width: 478px) {
     margin-top: ${props => props.mt / 4};
-    width: 310px;
   }
 `;
 export const Form = styled.form.attrs({
-  action: `mailto:boh001g@gmail.com`,
-  method: "post",
-  encType: "text/plain",
-  acceptCharset: "EUC-KR",
-  autoComplete: "off"
+  class: "gform",
+  action:
+    "https://script.google.com/macros/s/AKfycbwUFC6VW2v1cfYszjHFTj6XISO8SbanGnkx2exgg3BqNbh0slU/exec",
+  method: "post"
 })`
   width: 100%;
   height: 100%;

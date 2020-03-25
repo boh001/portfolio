@@ -6,17 +6,7 @@ import {
   ProjectItem
 } from "./Project.style";
 
-export default ({
-  id,
-  name,
-  des,
-  detail,
-  img,
-  ctg,
-  github,
-  member,
-  period
-}) => {
+export default ({ name, des }) => {
   const [active, setActive] = useState(false);
   const showDetail = useCallback(e => {
     setActive(!active);
@@ -27,11 +17,9 @@ export default ({
       onClick={e => showDetail(e)}
       active={active}
     >
-      <>
-        <ProjectName active={active}>{name}</ProjectName>
-        <ProjectDes active={active}>{des}</ProjectDes>
-        <ReadMore active={active}>Read More</ReadMore>
-      </>
+      <ProjectName active={active}>{name}</ProjectName>
+      <ProjectDes active={active}>{des}</ProjectDes>
+      <ReadMore active={active}>Read More</ReadMore>
     </ProjectItem>
   );
 };
