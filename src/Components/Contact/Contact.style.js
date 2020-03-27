@@ -151,6 +151,7 @@ export const Send = styled.div`
   }
   @media screen and (max-width: 478px) {
     font-size: 2em;
+  }
 `;
 export const Check = styled.span`
   font-size: 1em;
