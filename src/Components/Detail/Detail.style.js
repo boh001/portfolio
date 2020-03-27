@@ -9,7 +9,7 @@ export const ProjectDetail = styled.div`
   ${center}
   font-size: 100px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 100px;
   @media screen and (max-width: 1024px) {
     width: 700px;
     font-size: 90px;

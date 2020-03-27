@@ -7,10 +7,11 @@ export const Bg = styled.div`
   z-index: 2;
   background-color: #010001;
   min-height: 100vh;
-  transition: all ease 0.5s;
   ${center};
   @media screen and (min-width: 769px) {
-    ${props => props.active && "transform: translateX(-500px)"}
+    ${props =>
+      props.active &&
+      "transition: all ease 0.5s; transform: translateX(-500px)"}
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;

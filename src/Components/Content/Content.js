@@ -11,6 +11,8 @@ import {
   Theme
 } from "./Content.style";
 export default ({ top, h, theme, repeat, children }) => {
+  console.log("content");
+
   const [margin, setMargin] = useState(0);
   const prev = useCallback(e => {
     setMargin(margin + 200);

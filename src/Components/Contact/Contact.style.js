@@ -20,12 +20,7 @@ export const Wrap = styled.div`
     width: 100%;
   }
 `;
-export const Form = styled.form.attrs({
-  class: "gform",
-  action:
-    "https://script.google.com/macros/s/AKfycbwUFC6VW2v1cfYszjHFTj6XISO8SbanGnkx2exgg3BqNbh0slU/exec",
-  method: "post"
-})`
+export const Form = styled.form.attrs({})`
   width: 100%;
   height: 100%;
   ${center};
@@ -35,7 +30,8 @@ export const Form = styled.form.attrs({
 export const FormInput = styled.input.attrs(props => ({
   type: "text",
   placeholder: props.ph,
-  name: "수신자"
+  name: props.name,
+  autoComplete: "off"
 }))`
   width: 80%;
   margin-bottom: 60px;
@@ -59,7 +55,7 @@ export const FormInput = styled.input.attrs(props => ({
 
 export const FormMsg = styled.textarea.attrs(props => ({
   placeholder: props.ph,
-  name: "message"
+  name: "message_html"
 }))`
   width: 80%;
   margin-top: 60px;
@@ -145,5 +141,36 @@ export const Ment = styled.div`
   @media screen and (max-width: 478px) {
     font-size: 0.5em;
     margin-bottom: 50px;
+  }
+`;
+export const Send = styled.div`
+  color: white;
+  font-size: 6em;
+  @media screen and (max-width: 768px) {
+    font-size: 4em;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 2em;
+`;
+export const Check = styled.span`
+  font-size: 1em;
+  margin: 80px 0px;
+  text-transform: uppercase;
+  color: ${props => (props.check ? `${color.blue};` : "red;")};
+  @media screen and (max-width: 768px) {
+    font-size: 0.75em;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 0.5em;
+  }
+`;
+export const Span = styled.span`
+  font-size: 0.8em;
+  color: white;
+  @media screen and (max-width: 768px) {
+    font-size: 0.6em;
+  }
+  @media screen and (max-width: 478px) {
+    font-size: 0.4em;
   }
 `;

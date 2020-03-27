@@ -89,6 +89,8 @@ const Img = styled.img.attrs(props => ({
 `;
 
 export default React.memo(() => {
+  console.log("about");
+
   return (
     <>
       <Content repeat={"3,100%"} theme={"My skills"} h={350} top={335}>

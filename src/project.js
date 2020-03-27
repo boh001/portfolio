@@ -49,7 +49,8 @@ export const projects = [
   {
     id: "5",
     des: "Facebook Clone",
-    detail: "",
+    detail:
+      "As a solo project, Express and React have been used to implement the main functions of Facebook (real-time chat, photo and video upload, adding friends, commenting, and like button).At first, the client part was implemented using the Pug template engine. But for better cloning, re-implemented using React.",
     img: "/images/dust.jpg",
     ctg: "Web programming",
     github: "#",
@@ -59,7 +60,8 @@ export const projects = [
   {
     id: "6",
     des: "Weather-Todo-List",
-    detail: "",
+    detail:
+      "It is a website that uses basic toolist and weatherapi to inform the user of the current weather and notepad. This project was conducted to learn the basics of css3 and React.",
     img: "images/dust.jpg",
     ctg: "Web programming",
     github: "#",

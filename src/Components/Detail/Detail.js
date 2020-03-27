@@ -2,7 +2,6 @@ import React from "react";
 import {
   ProjectDetail,
   MainName,
-  DetailSub,
   DetailMain,
   MainImg,
   MainDes,
@@ -10,7 +9,6 @@ import {
   MainDetail,
   MainMem,
   MainPeriod,
-  SocialLink,
   Wrap
 } from "./Detail.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -37,13 +35,9 @@ export default withRouter(
               <MainName>{name}</MainName>
               <MainMem>{member}</MainMem>
               <MainPeriod>{period}</MainPeriod>
-              {/* <SocialLink url={github}>
-            <FontAwesomeIcon icon={faGithub} size={"4x"} />
-          </SocialLink> */}
               <MainDetail>{detail}</MainDetail>
             </MainDes>
           </DetailMain>
-          {/* <DetailSub></DetailSub> */}
         </ProjectDetail>
       </>
     );
