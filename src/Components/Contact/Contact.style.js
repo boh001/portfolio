@@ -61,6 +61,9 @@ export const FormMsg = styled.textarea.attrs(props => ({
   margin-top: 60px;
   font-size: 0.4em;
   ${props => props.write && "color:white;"}
+  ::-webkit-scrollbar {
+    display: none;
+  }
   &::placeholder {
     color: inherit;
   }

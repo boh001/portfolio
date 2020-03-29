@@ -20,8 +20,11 @@ import {
   Span
 } from "./Contact.style";
 import emailjs from "emailjs-com";
+import dotenv from "dotenv";
+dotenv.config();
 
 export default () => {
+  const [inith, seth] = useState(false);
   const [writeName, setWriteName] = useState(false);
   const OnWriteName = useCallback(e => {
     setWriteName(true);
@@ -35,14 +38,23 @@ export default () => {
   const OnWriteMsg = useCallback(e => {
     setWriteMsg(true);
   });
+  const autoSize = useCallback(e => {
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
+    if (e.target.style.height !== "35px") {
+      seth(true);
+    }
+  });
+  console.log(process.env.SERVICE);
+
   const sendEmail = useCallback(e => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "default_service",
-        "template_T1Y6Vhzx",
+        process.env.SERVICE,
+        process.env.TEMPLATE_ID,
         e.target,
-        "user_qWz9or4JUrMBUYU5D4gbL"
+        process.env.USER_ID
       )
       .then(
         result => {
@@ -94,6 +106,7 @@ export default () => {
               write={writeMsg}
               ph={"Write your message"}
               onChange={e => OnWriteMsg(e)}
+              onKeyDown={e => autoSize(e)}
             />
             <FormSubmit />
             <Social>

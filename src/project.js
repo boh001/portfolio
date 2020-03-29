@@ -1,3 +1,5 @@
+import * as kimbook from "./images/kimbook-react.PNG";
+import * as weather from "./images/weathertodo.png";
 export const projects = [
   {
     id: "1",
@@ -51,7 +53,7 @@ export const projects = [
     des: "Facebook Clone",
     detail:
       "As a solo project, Express and React have been used to implement the main functions of Facebook (real-time chat, photo and video upload, adding friends, commenting, and like button).At first, the client part was implemented using the Pug template engine. But for better cloning, re-implemented using React.",
-    img: "/images/dust.jpg",
+    img: kimbook,
     ctg: "Web programming",
     github: "#",
     member: "solo",
@@ -62,7 +64,7 @@ export const projects = [
     des: "Weather-Todo-List",
     detail:
       "It is a website that uses basic toolist and weatherapi to inform the user of the current weather and notepad. This project was conducted to learn the basics of css3 and React.",
-    img: "images/dust.jpg",
+    img: weather,
     ctg: "Web programming",
     github: "#",
     member: "solo",

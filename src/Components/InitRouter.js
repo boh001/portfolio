@@ -29,6 +29,7 @@ export default () => {
             <Route path="/about" component={About} />
             <Route path="/project" component={Projects} />
             <Route path="/contact" component={Contact} />
+            <Redirect to="/" />
           </Switch>
         </Page>
       </Bg>

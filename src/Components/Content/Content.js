@@ -2,7 +2,6 @@ import React, { useCallback, useState } from "react";
 
 import {
   Slider,
-  Wrap,
   Frame,
   Content,
   Prev,
