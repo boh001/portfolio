@@ -24,7 +24,6 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default () => {
-  const [inith, seth] = useState(false);
   const [writeName, setWriteName] = useState(false);
   const OnWriteName = useCallback(e => {
     setWriteName(true);
@@ -41,9 +40,6 @@ export default () => {
   const autoSize = useCallback(e => {
     e.target.style.height = "auto";
     e.target.style.height = e.target.scrollHeight + "px";
-    if (e.target.style.height !== "35px") {
-      seth(true);
-    }
   });
   console.log(process.env.SERVICE);
 
