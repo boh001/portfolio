@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export const LogoFrame = styled.div`
+export const LogoFrame = styled(Link)`
   position: absolute;
   top: 50px;
   left: 100px;

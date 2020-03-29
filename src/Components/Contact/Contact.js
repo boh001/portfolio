@@ -47,10 +47,10 @@ export default () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.SERVICE,
-        process.env.TEMPLATE_ID,
+        process.env.SERVICE || "default_service",
+        process.env.TEMPLATE_ID || "template_T1Y6Vhzx",
         e.target,
-        process.env.USER_ID
+        process.env.USER_ID || "user_qWz9or4JUrMBUYU5D4gbL"
       )
       .then(
         result => {

@@ -9,7 +9,7 @@ export default ({ active, setActive }) => {
   });
   return (
     <>
-      <LogoFrame>Logo</LogoFrame>
+      <LogoFrame to="/">Logo</LogoFrame>
       <Toggle onClick={e => showSlide(e)} active={active}>
         <ToggleUp active={active}></ToggleUp>
         <ToggleDown active={active}></ToggleDown>
