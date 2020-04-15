@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.65f44dcd.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.65f44dcd.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.af0b07c5.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.af0b07c5.js.map",
+    "static/js/2.8506cab6.chunk.js": "/portfolio/static/js/2.8506cab6.chunk.js",
+    "static/js/2.8506cab6.chunk.js.map": "/portfolio/static/js/2.8506cab6.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.3efe67bdf87fb7a03824f0724eddf95d.js": "/portfolio/precache-manifest.3efe67bdf87fb7a03824f0724eddf95d.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/js/2.8506cab6.chunk.js.LICENSE.txt": "/portfolio/static/js/2.8506cab6.chunk.js.LICENSE.txt",
+    "static/media/kimbook-react.PNG": "/portfolio/static/media/kimbook-react.62063fb8.PNG",
+    "static/media/weathertodo.png": "/portfolio/static/media/weathertodo.9e708993.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.af0b07c5.js",
+    "static/js/2.8506cab6.chunk.js",
+    "static/js/main.65f44dcd.chunk.js"
+  ]
+}
