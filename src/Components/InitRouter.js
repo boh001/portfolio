@@ -2,7 +2,7 @@ import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  Switch
+  Switch,
 } from "react-router-dom";
 import React, { useState } from "react";
 import Home from "Routes/Home";
@@ -18,9 +18,8 @@ export default () => {
   console.log("router");
   const [page, setPage] = useState("");
   const [active, setActive] = useState(false);
-  console.log(window.innerWidth);
   return (
-    <Router>
+    <Router basename={window.location.pathname || ""}>
       <Bg active={active}>
         <Logo page={page} active={active} setActive={setActive} />
         <Page>
